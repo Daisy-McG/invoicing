@@ -1,6 +1,6 @@
 from django.db import models
 
-class Event(models.Model):
+class Client(models.Model):
     """
     Client model
     """
