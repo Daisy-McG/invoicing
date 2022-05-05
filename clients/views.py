@@ -31,7 +31,7 @@ class CreateClientView(LoginRequiredMixin, CreateView):
 class EditClientView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """
     A view to provide a Form to the user
-    to edit an event
+    to edit an client
     """
     form_class = ClientForm
     template_name = 'clients/edit_client.html'
