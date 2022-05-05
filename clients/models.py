@@ -1,9 +1,12 @@
 from django.db import models
+from django.contrib.auth.models import User
+
 
 class Client(models.Model):
     """
     Client model
     """
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     client = models.CharField(max_length=200, null=False, blank=False)
     address_line_one = models.CharField(max_length=200, null=False, blank=False)
     address_line_two = models.CharField(max_length=200, null=True, blank=True)
