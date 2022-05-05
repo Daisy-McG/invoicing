@@ -28,7 +28,7 @@ class CreateClientView(LoginRequiredMixin, CreateView):
         return super(CreateClientView, self).form_valid(form)
 
 
-class EditEventView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+class EditClientView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """
     A view to provide a Form to the user
     to edit an event
@@ -42,7 +42,7 @@ class EditEventView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return self.request.user == self.get_object().user
 
 
-class ViewEventView(LoginRequiredMixin, UserPassesTestMixin, DetailView):
+class ViewClientView(LoginRequiredMixin, UserPassesTestMixin, DetailView):
     """ A view to return a single client """
     template_name = "clients/view_client.html"
     model = Client
